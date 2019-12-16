@@ -1,0 +1,5 @@
+<?PHP
+ /*
+  Take an rss feed as a get parameter and tell it the index of the feed article to look at. If there is an image for that, use it, otherwize, follow the link and extract the thumbnail for that page with an option to specify the in index fo the discovered <img> tag
+ */
+?>
