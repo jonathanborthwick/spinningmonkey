@@ -1,0 +1,35 @@
+SELECT IS_PROCESSING
+FROM LXP_AUTO_FEED_CONFIG
+
+-- WE will get a 1 or a 0. if 1, dont proceewd. If 0, alow algorythm 
+
+SELECT POST_ID, SUMMARY_TEXT FROM LXP_AUTO_FEED_POSTED
+WHERE 1 = 1
+ANDS IS_EDITED = 0
+
+ -- This will get us all the wordpress post ids and the summary text to check agains the 'live' pages
+
+-- algorythm
+
+Load all posts that have catageory rss
+Need a class to hold a summary text and wordpress post id and index on post with the original url for the editor to reference
+for each post, make an array of all the rss feed markup summary texts and the correspondiong post id
+
+[
+   { postId:429, title:"India citizenship law: 100,0000 attend Hyderabad protest  The Guardian", index:0, url:"", notes:"Google"},
+   { postid:429, title:"How digital activists around the world are trying to change the tone of social media  National Post", index:1, url:"", notes:"Google"},
+   { postid:429, title:"Scientists just found one of the world's largest flowers blooming in an Indonesian jungle  CTV News", index:2, url:"", notes:"Google"},
+   { postid:429, title:"Posted: World Of Hyatt Card 2020 Elite Nights  One Mile at a Time", index:3, url:"", notes:"Google"},
+   { postId:429, title:"Strait of Hormuz, the world’s biggest oil chokepoint, in focus as U.S.-Iran tensions flare  MarketWatch", index:4, url:"", notes:"Google"},
+   { postId:399, title:"Seven more Alberta firefighters sent to fight Australia's fires", index:0, url:"", notes:"CBC"},
+   { postId:399, title:"Queen in new photo portrait with 3 heirs to throne", index:1, url:"", notes:"CBC"},
+   { postId:399, title:"Knife attack near Paris treated as terror-related", index:2, url:"", notes:"CBC"},
+   { postId:399, title:"China replaces head of Hong Kong Liaison Office amid ongoing protests", index:3, url:"", notes:"CBC"},
+   { postid:399, title:"'Not safe to move': Wildfire threats intensify in Australia", index:4, url:"", notes:"CBC"},
+   { postid:409, title:"A lack of evidence has fueled doubt about whether the strike on a top Iranian commander was justified", index:0, url:"", notes:"CNN"},
+   { postid:409, title:"Soleimani's daughter seeks retribution", index:1, url:"", notes:"CNN"},
+   { postid:409, title:"Trump's warning: He says US has 'targeted 52 Iranian sites'", index:2, url:"", notes:"CNN"},
+   { postid:409, title:"Opinion:Trump threatens the stability of the world", index:3, url:"", notes:"CNN"},
+   { postid:409, title:"Fox News: Tucker Carlson criticizes Trump's strike", index:4, url:"", notes:"CNN"},
+   { postid:406, title:"US 'targeting' 52 Iranian sites if Tehran attacks", index:0, url:"https://www.bbc.co.uk/news/world-middle-east-50996602", notes:"BBC"}
+]
