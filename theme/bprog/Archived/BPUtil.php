@@ -4,6 +4,7 @@
 		
         public function __construct($debug)
 		{
+			//echo("BPUtil constructor caled"."<br/>");
             $this->debug = $debug;
 		}
 		
